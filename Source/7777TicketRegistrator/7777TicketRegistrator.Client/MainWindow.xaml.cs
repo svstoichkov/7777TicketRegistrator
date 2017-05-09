@@ -57,7 +57,7 @@
 
                         while (true)
                         {
-                            foreach (var barcode in this.Barcodes.Where(x => string.IsNullOrWhiteSpace(x.Status)))
+                            foreach (var barcode in this.Barcodes.Where(x => string.IsNullOrWhiteSpace(x.Status)).ToList())
                             {
                                 var status = await client.Register(barcode.Value);
                                 barcode.Status = status;
