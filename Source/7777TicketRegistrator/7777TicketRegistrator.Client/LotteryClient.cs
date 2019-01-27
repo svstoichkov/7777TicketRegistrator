@@ -51,7 +51,7 @@
 
         public async Task<string> Check(string barcode)
         {
-            if (barcode.Length != 14 && barcode.Length != 13)
+            if (barcode.Length != 15 && barcode.Length != 14 && barcode.Length != 13)
             {
                 return "Невалиден баркод";
             }
